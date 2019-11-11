@@ -1,0 +1,271 @@
+*{
+  box-sizing: border-box;
+}
+html, body{
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: url(../bilder/heroheader.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 420px;
+  display: flex;
+}
+h1{
+  font-family: 'Anton', sans-serif;
+  font-size: 68px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+h2{
+  font-family: 'Anton', sans-serif;
+  font-size: 42px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+h3{
+  font-family: 'Anton', sans-serif;
+  font-size: 26px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 21px;
+  text-align: center;
+}
+.logo-header, header nav, header section {
+  flex: 1;
+}
+
+
+.logo{
+  object-fit: scale-down;
+  max-width: 495px;
+}
+
+nav ul {
+  margin: 325px 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a{
+  font-size: 30px;
+  text-decoration: none;
+  padding: 10px;
+}
+.overhead{
+  text-align: center;
+  text-transform: uppercase;
+}
+.social{
+  padding: 50px;
+}
+
+.social a{
+  padding: 30px;
+  float: right;
+}
+
+.image-block, .image-block2 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+
+.front, .back, .middle{
+  margin: 10px;
+}
+
+/*--hover-flip--*/
+
+.card, .middle, .front{
+  flex-basis: auto;
+  display: inline-block;
+}
+
+
+.flip{
+  display: block;
+  padding-top: 100px;
+}
+
+.middle{
+  display: block;
+  float: left;
+  margin: 5px;
+  left: 25%;
+  transform: translate(-0%,-0%);
+}
+.card{
+  display: block;
+  float: left;
+  cursor: pointer;
+  width: 307px;
+  height: 292px;
+}
+.card
+.front,.back{
+  overflow: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  transition: transform .6s linear;
+}
+
+.front{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+.back{
+  transform: perspective(300px) rotateY(180deg);
+}
+.card:hover > .front{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
+}
+
+/* Download */
+.download{
+  background: lightgrey;
+  display: block;
+  width: 100%;
+  margin-top: 200px;
+  height: 400px;
+}
+.download> h1{
+  color: black;
+  padding-top: 30px;
+}
+.download> p{
+  color: black;
+  margin-top: 50px;
+  width: 53%;
+  margin: 0 auto;
+}
+
+.footer-top{
+  height: 45px;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  background: lightgrey;
+}
+.footer-bottom{
+  height: 300px;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  background: lightgrey;
+}
+.newsletter> h1, .footer-social> h1{
+  margin: 0;
+}
+.newsletter, .footer-social{
+  flex: 1;
+  border: 2px solid black;
+}
+.opening-hours, .visit, .contact{
+  flex: 1;
+}
+.opening-hours> h1, .visit> h1, .contact> h1{
+  margin: 0;
+}
+.opening-hours> p{
+  text-align: center;
+  line-height: 40px;
+}
+.opening-hours tr td:first-child{
+  width: 55%;
+}
+table{
+  margin-top: 40px;
+}
+tr{
+  display: table-row;
+}
+td{
+  display: table-cell;
+  padding-left: 40px;
+  text-align: justify;
+  line-height: 1.4em;
+  font-weight: bold;
+}
+.map{
+  display: block;
+  width: 100%;
+  height: 400px;
+  padding-top: 20px;
+}
+.map> h2{
+  border-bottom: 4px solid black;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 5px;
+}
+.copyright{
+  display: block;
+  width: 100%;
+  height: 200px;
+  padding-top: 30px;
+}
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
+  body{
+    background: lightblue;
+  }
+}
+
+
+
+@media only screen and (max-width: 960px) {
+  body{
+    background: grey;
+  }
+  .back-img{
+    visibility: visible;
+  }
+  .img1, .img2, .img3, .img4, .img5, .img6{
+    visibility: hidden;
+  }
+  .image-block{
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .image-block{
+    margin: 100px 0 0 0;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .image-block{
+    margin-top: 100px;
+  }
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+  body{
+    box-sizing: border-box;
+  }
+  .image-block{
+    margin-top: 100px;
+  }
+}
