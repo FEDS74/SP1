@@ -13,7 +13,7 @@ header {
   background-size: cover;
   background-position: center;
   position: relative;
-  height: 420px;
+  height: 350px;
   display: flex;
   width: 100%;
 }
@@ -26,7 +26,7 @@ h1 {
   text-transform: uppercase;
 }
 
-h2 {
+h2, h4 {
   font-family: 'Anton', sans-serif;
   font-size: 42px;
   letter-spacing: 0.05em;
@@ -41,33 +41,41 @@ h3 {
   text-align: center;
   text-transform: uppercase;
 }
-
+h4{
+  text-align: left;
+  margin-left: 150px;
+  text-decoration: underline;
+}
 p {
   font-family: 'Roboto', sans-serif;
   font-size: 21px;
   text-align: center;
 }
 
-.logo-header, header nav, header section {
+.logo-header, header nav {
   flex: 1;
 }
 
 .logo {
-  object-fit: scale-down;
   cursor: pointer;
-  width: 400px;
+  width: 15%;
   margin: 20px 0 0 30px;
+  position: absolute;
 }
+
 nav ul {
-  margin: 150px;
+  list-style-type: none;
+  margin: 0;
+  margin-top: 265px;
+  margin-right: 25px;
   padding: 0;
-  text-align: center;
+  overflow: hidden;
+  float: right;
   font-family: 'Roboto', sans-serif;
 }
 
 nav ul li {
-  display: flex;
-  flex-flow: column;
+  display: inline-block;
   margin-bottom: 10px;
   padding: 0 0 10px 0;
   margin: 0 auto;
@@ -75,17 +83,19 @@ nav ul li {
 }
 
 nav ul li a {
+  display: block;
   font-size: 120%;
+  text-align: center;
   text-decoration: none;
-  padding: 10px 25px;
   text-transform: uppercase;
   font-weight: bold;
-  transition: 0.7s;
+  padding: 14px 22px;
+  transition: 1.5s;
 }
 
-a:hover {
+nav ul li a:hover {
   color: white;
-  transform: rotate(30deg);
+  transform: scale(1.4);
 }
 
 .overhead {
@@ -97,7 +107,7 @@ a:hover {
 .overhead-p {
   text-align: justify;
   margin: 0 200px 20px 200px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.025em;
   line-hight: 2px;
 }
 
@@ -131,8 +141,15 @@ a:hover {
   flex-wrap: nowrap;
   justify-content: center;
 }
+.image-block-explore{
+  text-align: center;
+  margin-top: 100px;
+}
+.explore{
+  width: 60%;
+}
 
-.mobile-image-block {
+.mobile-image-block, .mobile-image-block-explore {
   display: none;
 }
 
@@ -171,10 +188,10 @@ a:hover {
 }
 
 .card .front, .back {
-  overflow: hidden;
   backface-visibility: hidden;
   position: absolute;
   transition: transform 1.0s linear;
+  overflow: hidden;
 }
 
 .front {
@@ -195,7 +212,7 @@ a:hover {
 
 /* Download */
 .download {
-  background: lightgrey;
+  background: lightblue;
   display: block;
   width: 100%;
   margin-top: 125px;
@@ -230,10 +247,11 @@ a:hover {
   width: 100%;
   margin: 0 auto;
   background: lightgrey;
+  text-align: center;
 }
 
 .footer-bottom {
-  height: 300px;
+  height: 450px;
   display: flex;
   width: 100%;
   margin: 0 auto;
@@ -244,13 +262,15 @@ a:hover {
   margin: 0;
 }
 
-.newsletter, .footer-social {
+.newsletter, .footer-social  {
+  width: 300px;
+  height: 50px;
   flex: 1;
-  border: 2px solid black;
 }
 
 .opening-hours, .visit, .contact {
   flex: 1;
+  margin-top: 50px;
 }
 
 .opening-hours>h1, .visit>h1, .contact>h1 {
@@ -260,10 +280,14 @@ a:hover {
 .opening-hours>p, .visit>p, .contact>p {
   text-align: center;
   line-height: 1.3em;
-  font-size: 20px;
+  font-size: 21px;
   padding-top: 10px;
-  width: 80%;
+  width: 55%;
   margin: 0 auto;
+}
+.visit, .contact{
+  border-left: 2px solid black;
+  height: 300px;
 }
 
 .opening-hours tr td:first-child {
@@ -300,7 +324,7 @@ td {
   width: 80%;
   margin: 0 auto;
   margin-top: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   padding-bottom: 5px;
 }
 
@@ -312,19 +336,129 @@ td {
   margin-bottom: 100px;
 }
 
-//--MEDIA QUERY--//
-@media only screen and (max-width: 1123px) {
-  .logo {
-    width: 200px;
+/*MEDIA QUERY*/
+/* @media only screen and (max-width: 1000px) {
+  header{
+    height: 300px;
   }
+  nav ul{
+    margin-top: 242px;
+  }
+  nav ul li a{
+    font-size: 90%;
+    padding: 7px 11px;
+  }
+} */
+
+@media only screen and (min-width: 480px) and (max-width: 1000px){
+  header {
+    height: 200px;
+  }
+  h1{
+    font-size: 290%;
+  }
+  p{
+    font-size: 90%;
+  }
+  .logo{
+    width: 25%;
+  }
+  nav ul{
+    margin-right: 20px;
+    margin-top: 162px;
+  }
+  nav ul li a{
+    padding: 0 10px;
+    font-size: 90%;
+  }
+  nav ul li a:hover {
+    transform: scale(1.3);
+  }
+  .overhead-p{
+    margin: 0 100px 20px 100px;
+    letter-spacing: normal;
+    font-size: 90%;
+  }
+  .overhead-underline{
+    margin-top: 35px;
+  }
+.overhead-underline{
+  margin-bottom: 30px;
+}
+.image-block, .image-block2, .image-block-explore{
+  display: none;
+}
+.mobile-image-block{
+  display: block;
+  margin-left: 50px;
+}
+.mobile-img{
+  margin: 0 20px 10px 0;
+  width: 45%;
+  cursor: pointer;
+}
+.download{
+  margin-top: 50px;
+}
+.download> p{
+  width: 520px;
+}
+
+.footer-bottom{
+  padding-top: 100px;
+}
+.opening-hours, .visit, .contact {
+  margin-top: 25px;
+}
+
+.opening-hours>p, .visit>p, .contact>p {
+  font-size: 90%;
+  width: 80%;
+  text-align: justify;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.contact {
+  margin-bottom: 25px;
+}
+td{
+  font-size: 90%;
+  padding: 0;
+}
+
+
+.map {
+  height: 100%;
+}
+
+.map>h2 {
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.copyright {
+  height: 100%;
+  padding: 0;
+}
+
+.copyright>p {
+  font-size: 90%;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
 }
 
 @media only screen and (max-width: 480px) {
-  header {
-    display: block;
+  header{
     height: 150px;
   }
-
+  .logo{
+    width: 40%;
+  }
   h1 {
     font-size: 180%;
   }
@@ -344,47 +478,22 @@ td {
   }
 
   .overhead-p {
-    font-size: 70%;
-    margin: 0 50px 10px 50px;
+    font-size: 90%;
+    margin: 0 50px 25px 50px;
+    letter-spacing: normal;
   }
-
+.overhead-underline{
+  margin-top: 35px;
+}
   .social {
     display: none;
   }
-
-  nav ul {
-    margin: 0;
-    margin-top: 30px;
+  nav ul{
+    display: none;
   }
+/* TODO:  make mobile NAV*/
 
-  nav ul li{
-    display: inline-block;
-  }
 
-  nav ul li a {
-    font-size: 60%;
-    padding: 15px 5px;
-  }
-
-  .active a {
-    background-color: inherit;
-    color: blue;
-  }
-
-  a:hover {
-    color: white;
-  }
-
-  .logo-header {
-    flex: auto;
-  }
-
-  .logo {
-    height: 50px;
-    margin: 15px 10px;
-    width: 150px;
-    object-fit: cover;
-  }
   .overhead-underline{
     margin-bottom: 50px;
   }
@@ -393,18 +502,37 @@ td {
   }
 
   .mobile-img {
+    margin-left: 10px;
+    margin-bottom: 15px;
     width: 95%;
   }
-.download>p {
+  .download{
+    margin-top: 45px;
+  }
+  .download> h1{
+    width: 100%;
+  }
+.download> p {
   width: 70%;
+  font-size: 90%
 }
 .download-btn {
   margin: 50px 0 0;
 }
-  .image-block, .image-block2 {
+  .image-block, .image-block2, .image-block-explore {
     display: none;
   }
-
+  .newsletter, .footer-social  {
+    width: 175px;
+    height: 50px;
+    flex: 1;
+    border-radius: 0;
+  }
+/* .newsletter{
+  margin: 0;
+  margin-left: 28px;
+  margin-top: -13px;
+} */
   .footer-bottom {
     flex-direction: column;
     height: 100%;
@@ -426,7 +554,9 @@ td {
   .contact {
     margin-bottom: 25px;
   }
-
+  td{
+    font-size: 90%;
+  }
   .map {
     height: 100%;
   }
