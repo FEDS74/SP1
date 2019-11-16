@@ -52,44 +52,43 @@ p {
   text-align: center;
 }
 
-.logo-header, header nav {
+.logo-header{
   flex: 1;
 }
-
+header nav {
+  flex: 2;
+}
 .logo {
   cursor: pointer;
   width: 15%;
   margin: 20px 0 0 30px;
   position: absolute;
 }
-
+nav{
+  width: 100%;
+  height: 50px;
+}
 nav ul {
-  list-style-type: none;
-  margin: 0;
-  margin-top: 265px;
-  margin-right: 25px;
-  padding: 0;
-  overflow: hidden;
-  float: right;
+  float: left;
   font-family: 'Roboto', sans-serif;
+  margin-left: 300px;
 }
 
 nav ul li {
-  display: inline-block;
-  margin-bottom: 10px;
-  padding: 0 0 10px 0;
-  margin: 0 auto;
-  text-align: justify;
+  float: left;
+  list-style: none;
+  margin: 268px 20px 0;
+  position: relative;
 }
 
 nav ul li a {
   display: block;
-  font-size: 120%;
-  text-align: center;
+  font-family:  'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 24px 14px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 14px 22px;
   transition: 1.5s;
 }
 
@@ -97,7 +96,34 @@ nav ul li a:hover {
   color: white;
   transform: scale(1.4);
 }
+nav ul li ul{
+  display: none;
+  position: absolute;
+  background-color: #d01293;
+  margin: 0;
+  margin-top: 1px;
+  padding: 0;
+  border-radius: 0 0 6px 6px;
+}
+nav ul li:hover ul{
+  display: block;
+}
+nav ul li ul li{
+  padding: 0 5px 5px 5px;
+  margin: 0;
+  width: 225px;
+}
+nav ul li ul li a{
 
+  padding: 10px 12px;
+}
+nav ul li ul li a:hover{
+  background-color: #fff;
+  border-radius: 6px;
+}
+.active{
+  color: blue;
+}
 .overhead {
   text-align: center;
   text-transform: uppercase;
@@ -146,7 +172,7 @@ nav ul li a:hover {
   margin-top: 100px;
 }
 .explore{
-  width: 60%;
+  width: 80%;
 }
 
 .mobile-image-block, .mobile-image-block-explore {
