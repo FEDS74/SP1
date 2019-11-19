@@ -48,6 +48,13 @@ h4{
   margin-left: 150px;
   text-decoration: underline;
 }
+h5{
+  text-align: center;
+  text-decoration: underline;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 p {
   font-family: 'Roboto', sans-serif;
   font-size: 21px;
@@ -118,7 +125,7 @@ nav ul li:hover ul{
 nav ul li ul li{
   padding: 0 5px 5px 5px;
   margin: 0;
-  width: 250px;
+  width: 280px;
 }
 nav ul li ul li a{
 
@@ -142,7 +149,8 @@ a.active {
 
 .overhead-p {
   text-align: justify;
-  margin: 0 200px 20px 200px;
+  margin: 0;
+  padding: 30px 200px 30px;
   letter-spacing: 0.025em;
   line-hight: 2px;
 }
@@ -177,27 +185,27 @@ a.active {
   flex-wrap: nowrap;
   justify-content: center;
 }
-.image-block-explore{
+.image-block-not-index{
   text-align: center;
   margin-top: 100px;
 }
-.image-block-explore> img{
+.image-block-not-index> img{
   display: inline-block;
   max-width: 500px;
-  width: 400px;
-  height: 400px;
-  margin: 0 10px;
+  width: 300px;
+  height: 300px;
+  margin: 0 20px;
 }
 
-.mobile-image-block-explore{
-
+.mobile-image-block-not-index{
+display: none;
 }
 
 .explore{
   width: 80%;
 }
 
-.mobile-image-block, .mobile-image-block-explore {
+.mobile-image-block, .mobile-image-block-not-index {
   display: none;
 }
 
@@ -371,16 +379,24 @@ td {
   font-weight: bold;
   font-size: 20px;
 }
-
-.map {
+.before_map> h2{
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-bottom: 5px;
+}
+.before_map{
+  margin-bottom: 10px;
+}
+.map, .before_map {
   width: 100%;
   height: 400px;
   padding-top: 20px;
   padding-bottom: 50px;
 }
 
-.map>h2 {
-  border-bottom: 4px solid black;
+.map> h2 {
+  border-bottom: 2px solid black;
   width: 80%;
   margin: 0 auto;
   margin-top: 50px;
@@ -397,7 +413,7 @@ td {
 }
 .top{
   float: right;
-  padding-right: 50px;
+  padding: 0 30px 20px;
 }
 
 
@@ -415,6 +431,12 @@ td {
   }
 } */
 
+
+@media only screen and (min-width: 1000px) and (max-width: 1439px){
+  nav ul{
+   margin-left: 10px;
+  }
+}
 @media only screen and (min-width: 480px) and (max-width: 1000px){
   header {
     height: 200px;
@@ -439,10 +461,14 @@ td {
   nav ul li a:hover {
     transform: scale(1.3);
   }
+  nav{
+    display: none;
+  }
   .overhead-p{
     margin: 0 100px 20px 100px;
     letter-spacing: normal;
     font-size: 90%;
+    padding: 0;
   }
   .overhead-underline{
     margin-top: 35px;
@@ -461,9 +487,11 @@ td {
   margin: 0 20px 10px 0;
   width: 45%;
   cursor: pointer;
+  height: 300px;
 }
 .download{
   margin-top: 50px;
+  height: 325px;
 }
 .download> p{
   width: 520px;
@@ -493,12 +521,12 @@ td{
 }
 
 
-.map {
+.map, .before_map {
   height: 100%;
 }
 
+
 .map>h2 {
-  border-bottom: 2px solid black;
   margin-bottom: 10px;
   margin-top: 10px;
 }
@@ -530,6 +558,7 @@ td{
 
   h2 {
     font-size: 100%;
+    font-weight: lighter;
     border-bottom: 2px solid black;
   }
 
@@ -540,16 +569,45 @@ td{
     width: 50%;
     margin: 0 auto;
     padding-bottom: 5px;
+    padding-top: 50px;
   }
+  h4{
+    font-size: 120%;
+    margin-top: 0;
+    margin-left: 40px;
+    font-weight: lighter;
+  }
+  p{
+    font-size: 90%;
+  }
+
+.overhead{
+  margin-bottom: 3px;
+}
 
   .overhead-p {
     font-size: 90%;
-    margin: 0 50px 25px 50px;
+    margin: 30px 50px 0px 50px;
     letter-spacing: normal;
+    padding: 0;
   }
 .overhead-underline{
   margin-top: 35px;
+  margin-bottom: 50px;
 }
+
+.overhead-underline-top{
+  margin-bottom: 0;
+}
+
+.visit, .contact{
+  border-left: none;
+}
+
+.visit-p> p{
+
+}
+
   .social {
     display: none;
   }
@@ -559,9 +617,6 @@ td{
 /* TODO:  make mobile NAV*/
 
 
-  .overhead-underline{
-    margin-bottom: 50px;
-  }
   .mobile-image-block {
     display: block;
   }
@@ -570,9 +625,12 @@ td{
     margin-left: 10px;
     margin-bottom: 15px;
     width: 95%;
+    height: 300px;
   }
+
   .download{
     margin-top: 45px;
+    height: 300px;
   }
   .download> h1{
     width: 100%;
@@ -583,6 +641,14 @@ td{
 }
 .download-btn {
   margin: 50px 0 0;
+}
+
+.opening-hours> h3{
+  margin-top: 30px;
+}
+
+.image-block-not-index{
+  margin: 50px 0;
 }
   .image-block, .image-block2, .image-block-explore {
     display: none;
@@ -610,10 +676,7 @@ td{
   .opening-hours>p, .visit>p, .contact>p {
     font-size: 90%;
     width: 80%;
-    text-align: justify;
     margin: 0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
   }
 
   .contact {
@@ -621,6 +684,9 @@ td{
   }
   td{
     font-size: 90%;
+  }
+  .before_map{
+    height: 100%;
   }
   .map {
     height: 100%;
