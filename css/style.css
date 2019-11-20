@@ -7,14 +7,19 @@ html, body {
   padding: 0;
 }
 
-
+.header-sticky{
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  top: 0;
+}
 header {
   background: url(../img/heroheader.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
-  height: 350px;
+  height: 250px;
   display: flex;
   width: 100%;
 }
@@ -64,7 +69,7 @@ p {
 .logo-header{
   flex: 1;
 }
-header nav {
+header .desktop-navigation {
   flex: 2;
 }
 .logo {
@@ -73,24 +78,24 @@ header nav {
   margin: 20px 0 0 30px;
   position: absolute;
 }
-nav{
+.desktop-navigation{
   width: 100%;
   height: 50px;
 }
-nav ul {
+.desktop-navigation ul {
   float: left;
   font-family: 'Roboto', sans-serif;
   margin-left: 300px;
 }
 
-nav ul li {
+.desktop-navigation ul li {
   float: left;
   list-style: none;
-  margin: 268px 10px 0;
+  margin: 168px 10px 0;
   position: relative;
 }
 
-nav ul li a {
+.desktop-navigation ul li a {
   display: block;
   color: white;
   font-family:  'Roboto', sans-serif;
@@ -102,16 +107,16 @@ nav ul li a {
   transition: 1.5s;
 }
 
-nav ul li a:hover {
+.desktop-navigation ul li a:hover {
   color: #473EEB;
   transform: scale(1.4);
 }
 
-nav ul li ul li a:hover, .active:hover{
+.desktop-navigation ul li ul li a:hover, .active:hover{
   color: #473EEB;
   transform: none;
 }
-nav ul li ul{
+.desktop-navigation ul li ul{
   display: none;
   position: absolute;
   background-color: #d01293;
@@ -119,23 +124,24 @@ nav ul li ul{
   padding: 0;
   border-radius: 0 0 6px 6px;
 }
-nav ul li:hover ul{
+.desktop-navigation ul li:hover ul{
   display: block;
 }
-nav ul li ul li{
+.desktop-navigation ul li ul li{
   padding: 0 5px 5px 5px;
   margin: 0;
   width: 280px;
 }
-nav ul li ul li a{
-
+.desktop-navigation ul li ul li a{
   padding: 10px 12px;
 }
-nav ul li ul li a:hover{
+.desktop-navigation ul li ul li a:hover{
   background-color: #fff;
   border-radius: 6px;
 }
-
+.mobile-navigation{
+  display: none;
+}
 a.active {
   background-color: #886BF2;
   color: white;
@@ -145,6 +151,7 @@ a.active {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: 40px;
+  margin-top: 370px;
 }
 
 .overhead-p {
@@ -433,7 +440,7 @@ td {
 
 
 @media only screen and (min-width: 1000px) and (max-width: 1439px){
-  nav ul{
+  .desktop-navigation ul{
    margin-left: 10px;
   }
 }
@@ -450,18 +457,18 @@ td {
   .logo{
     width: 25%;
   }
-  nav ul{
+  .desktop-navigation ul{
     margin-right: 20px;
     margin-top: 162px;
   }
-  nav ul li a{
+  .desktop-navigation ul li a{
     padding: 0 10px;
     font-size: 90%;
   }
-  nav ul li a:hover {
+  .desktop-navigation ul li a:hover {
     transform: scale(1.3);
   }
-  nav{
+  .desktop-navigation{
     display: none;
   }
   .overhead-p{
@@ -611,8 +618,13 @@ td{
   .social {
     display: none;
   }
-  nav ul{
+  desktop-navigation{
     display: none;
+  }
+
+  .mobile-navigation{
+    display: block;
+    font-size: 6px;
   }
 /* TODO:  make mobile NAV*/
 
