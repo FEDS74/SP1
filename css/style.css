@@ -9,7 +9,7 @@ html, body {
 
 .header-sticky{
   position: fixed;
-  z-index: 5;
+  z-index: 99999;
   width: 100%;
   top: 0;
 }
@@ -39,6 +39,7 @@ h2, h4 {
   text-align: center;
   text-transform: uppercase;
   margin-top: 100px;
+  font-weight: normal;
 }
 
 h3 {
@@ -49,11 +50,13 @@ h3 {
   text-transform: uppercase;
 }
 h4{
+  font-family: 'Anton', sans-serif;
   text-align: left;
   margin-left: 150px;
   text-decoration: underline;
 }
 h5{
+  font-family: 'Anton', sans-serif;
   text-align: center;
   text-decoration: underline;
   font-size: 12px;
@@ -74,7 +77,7 @@ header .desktop-navigation{
 }
 .logo {
   cursor: pointer;
-  width: 15%;
+  width: 20%;
   margin: 20px 0 0 30px;
   position: absolute;
 }
@@ -97,10 +100,10 @@ header .desktop-navigation{
 
 .desktop-navigation ul li a {
   display: block;
-  color: white;
+  color: black;
   font-family:  'Roboto', sans-serif;
-  font-size: 18px;
-  padding: 22px 8px;
+  font-size: 22px;
+  padding: 19.5px 8px;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: bold;
@@ -136,16 +139,16 @@ header .desktop-navigation{
 .desktop-navigation ul li ul li a{
   padding: 10px 12px;
 }
-.desktop-navigation ul li ul li a:hover{
-  background-color: #fff;
-  border-radius: 6px;
-}
+
 .mobile-navigation{
   display: none;
 }
 a.active {
   background-color: #886BF2;
-  color: white;
+  color: black;
+}
+a.subactive{
+  background-color: #9886F2;
 }
 
 .overhead {
@@ -157,10 +160,10 @@ a.active {
 
 .overhead-p {
   text-align: justify;
-  margin: 0;
-  padding: 30px 200px 30px;
+  margin: 0 auto;
+  padding: 30px 0 0 30px;
   letter-spacing: 0.025em;
-  line-hight: 2px;
+  max-width: 90%;
 }
 
 .overhead-underline {
@@ -193,10 +196,12 @@ a.active {
   flex-wrap: nowrap;
   justify-content: center;
 }
+
 .image-block-not-index{
   text-align: center;
   margin-top: 100px;
 }
+
 .image-block-not-index> img{
   display: inline-block;
   max-width: 500px;
@@ -285,6 +290,7 @@ a.active {
 }
 
 
+
 /* Download */
 .download {
   background: lightblue;
@@ -333,15 +339,35 @@ a.active {
   background: lightgrey;
 }
 
-.newsletter>h1, .footer-social>h1 {
-  margin: 0;
+.newsletter_btn  {
+float: right;
+margin-top: 10px;
+width: 150px;
+height: 50px;
+margin: 0 auto;
+margin-left: 20px;
 }
 
-.newsletter, .footer-social  {
+.footer-social-links{
+  float: right;
   margin-top: 10px;
   width: 300px;
   height: 50px;
+  margin: 0 auto;
+  margin-left: 20px;
+}
+.newsletter{
+  border: 1px solid red;
+  height: 50px;
   flex: 1;
+  padding-right: 100px;
+}
+
+.footer-social{
+  border: 1px solid red;
+  height: 50px;
+  flex: 1;
+  padding-right: 50px;
 }
 
 .opening-hours, .visit, .contact {
@@ -403,21 +429,15 @@ td {
   padding-bottom: 50px;
 }
 
-.map> h2 {
-  border-bottom: 2px solid black;
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 50px;
-  margin-bottom: 30px;
-  padding-bottom: 5px;
-}
-
 .copyright {
   display: block;
   width: 100%;
   height: 200px;
-  padding-top: 100px;
+  padding-top: 200px;
   margin-bottom: 100px;
+}
+.copyright> p{
+  font-size: 80%;
 }
 .top{
   float: right;
@@ -427,6 +447,23 @@ td {
 
 
 @media only screen and (min-width: 1000px) and (max-width: 1135px){
+  .logo{
+    width: 20%;
+  }
+
+  h1{
+    font-size: 290%;
+    font-weight: lighter;
+  }
+
+h2{
+  font-weight: lighter;
+}
+
+  h3{
+    font-weight: lighter;
+    margin: 5px;
+  }
 
   h4{
     font-size: 180%;
@@ -434,6 +471,11 @@ td {
     margin-left: 105px;
     font-weight: lighter;
   }
+
+  p{
+    font-size: 90%;
+  }
+
   .desktop-navigation ul{
     margin-right: 50px;
     margin-top: 21px;
@@ -450,11 +492,126 @@ td {
   }
   .overhead{
     margin-top: 300px;
+    margin-bottom: 5px;
+  }
+  .overhead-p{
+    padding-top: 10px;
+    padding-bottom: 15px;
   }
 }
-@media only screen and (min-width: 480px) and (max-width: 1000px){
+
+@media only screen and (min-width: 736px) and (max-width: 1000px){
   header {
     height: 200px;
+  }
+
+  h1{
+    font-size: 290%;
+    font-weight: lighter;
+  }
+
+h2{
+  font-weight: lighter;
+}
+
+  h3{
+    font-weight: lighter;
+    margin: 5px;
+  }
+
+  h4{
+    font-size: 140%;
+    margin-top: 60px;
+    margin-left: 80px;
+    font-weight: lighter;
+  }
+  p{
+    font-size: 90%;
+  }
+
+    /* header nav */
+  .mobile-navigation{
+    display: none;
+  }
+
+  .desktop-navigation ul{
+    margin-right: 0;
+    float: none;
+    padding: 0;
+    padding-left: 20px;
+  }
+
+  .desktop-navigation ul li{
+    margin: 122px 0;
+  }
+  .desktop-navigation ul li a{
+    font-size: 14px;
+  }
+
+  .desktop-navigation ul li ul li a{
+    font-size: 70%;
+  }
+
+  .download{
+    margin-top: 100px;
+    height: 350px;
+  }
+
+  .overhead{
+    margin-top: 265px;
+    margin-bottom: 5px;
+  }
+
+  .overhead-p{
+    padding: 15px 80px 15px;
+  }
+
+  .overhead-underline{
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+.opening-hours > p, .visit > p, .contact > p{
+  padding: 0;
+}
+
+  .image-block, .image-block2{
+    display: none;
+  }
+
+  .mobile-image-block{
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+  .mobile-img{
+    width: 350px;
+    height: 300px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+  }
+
+  td{
+    font-size: 80%;
+  }
+
+.before_map{
+}
+
+  .map> h2{
+    padding: 5px;
+    margin: 0;
+  }
+
+  .copyright{
+    height: 10px;
+  }
+}
+
+@media only screen and (min-width: 667px) and (max-width: 736px){
+  header {
+    height: 100px;
   }
   h1{
     font-size: 290%;
@@ -470,13 +627,13 @@ td {
   }
   .logo{
     width: 25%;
+    margin: 15px 15px;
   }
   .desktop-navigation{
     display: none;
   }
 
   /* header nav */
-
   .mobile-navigation{
     display: block;
     width: 100%;
@@ -487,13 +644,14 @@ td {
     padding: 0;
     overflow: hidden;
     width: 100%;
+    overflow-y: auto;
   }
-
 
   .mobile-navigation ul li{
     list-style: none;
     background-color: #d01293;
   }
+
   .mobile-navigation ul li a{
     text-decoration: none;
     display: block;
@@ -501,16 +659,15 @@ td {
     padding: 15px;
   }
 
-
   .mobile-navigation ul li ul li{
   width: 100%;
   }
-
 
   .mobile-navigation ul li ul{
     background-color: #d01293;
     border-radius: 0 0 6px 6px;
   }
+
   .mobile-navigation ul li:hover ul{
     display: block;
   }
@@ -530,7 +687,6 @@ td {
   color: blue;
 }
   .mobile-navigation ul li{
-    list-style: none;
     background-color: #d01293;
   }
 
@@ -540,8 +696,6 @@ td {
     transition: max-height 0.5s ease-out;
   }
   .mobile-navigation .mobile-menu-icon{
-    padding: 98px;
-    position: relative;
     float: right;
     cursor: pointer;
   }
@@ -584,8 +738,7 @@ td {
 
 
   .mobile-navigation .mobile-menu-btn:checked ~ .mobile-menu{
-    max-height: 600px;
-    width: 100%;
+    max-height: 400px;
   }
 
   .mobile-navigation .mobile-menu-btn:checked ~ .mobile-menu-icon .mobile-navigation-icon{
@@ -608,12 +761,30 @@ td {
     margin-top: 0;
   }
 
-  .mobile-menu-icon{
-    top: 60px;
-    right: -40px;
+  .mobile-navigation ul ul {
+  visibility: hidden;
   }
+
+  .mobile-navigation ul li.submenu:hover ul{
+  visibility: visible;
+  }
+
+  .mobile-navigation .mobile-menu-icon{
+    padding: 15px 10px;
+    position: relative;
+    margin: 67px 30px 0 40px;
+  }
+  .mobile-navigation ul li a{
+    font-size: 80%;
+  }
+
+  .mobile-menu-icon{
+    top: -15px;
+    right: 5px;
+  }
+
 .overhead{
-    margin-top: 250px;
+    margin-top: 170px;
 }
 
   .overhead-p{
@@ -641,6 +812,9 @@ td {
     cursor: pointer;
     height: 300px;
   }
+
+
+
   .download{
     margin-top: 50px;
     height: 325px;
@@ -697,36 +871,23 @@ td {
   }
 }
 
-@media only screen and (max-width: 480px) {
+
+
+@media only screen and (min-width: 480px) and (max-width: 667px){
   header{
-    height: 150px;
+    height: 100px;
   }
   .logo{
-    width: 45%;
-  }
-  h1 {
-    font-size: 180%;
+    margin: 15px 0 0 25px;
   }
 
-  h2 {
-    font-size: 100%;
-    font-weight: lighter;
-    border-bottom: 2px solid black;
-  }
-
-  h3 {
-    font-size: 100%;
-    font-weight: normal;
-    border-bottom: 2px solid black;
-    width: 50%;
-    margin: 0 auto;
-    padding-bottom: 5px;
-    padding-top: 50px;
+  h1{
+    font-size: 190%;
   }
   h4{
-    font-size: 120%;
-    margin-top: 0;
-    margin-left: 40px;
+    font-size: 140%;
+    margin-top: 60px;
+    margin-left: 80px;
     font-weight: lighter;
   }
   p{
@@ -734,8 +895,91 @@ td {
   }
 
   .overhead{
+    margin-top: 150px;
+  }
+
+  .overhead-p{
+    font-size: 90%;
+  }
+
+  .explore{
+    padding-bottom: 10px;
+  }
+
+    /* header nav */
+  .mobile-navigation ul{
+    position: sticky;
+    height: 275px;
+    overflow-y: auto;
+  }
+
+  .mobile-navigation ul li a{
+    padding: 11.5px;
+    color: black;
+  }
+
+  .mobile-navigation ul ul {
+  visibility: hidden;
+  }
+  .mobile-navigation ul li.submenu:hover ul{
+  visibility: visible;
+  }
+
+  .mobile-navigation .mobile-menu-icon{
+    padding: 15px 10px;
+    position: relative;
+    margin: 67px 30px 0 40px;
+  }
+  .mobile-navigation ul li a{
+    font-size: 80%;
+  }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+  header{
+    height: 150px;
+  }
+
+  .logo{
+    width: 45%;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: normal;
+  }
+  h2 {
+    font-size: 100%;
+    font-weight: lighter;
+  }
+
+  h3 {
+    font-size: 100%;
+    font-weight: normal;
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    padding-top: 50px;
+  }
+
+  h4{
+    font-size: 120%;
+    margin-top: 0;
+    margin-left: 40px;
+    font-weight: lighter;
+  }
+
+  p{
+    font-size: 90%;
+    text-align: justify;
+    margin-left: 100px;
+  }
+
+  .overhead{
     margin-bottom: 3px;
-    margin-top: 200px;
+    margin-top: 190px;
   }
 
   .overhead-p {
@@ -744,41 +988,63 @@ td {
     letter-spacing: normal;
     padding: 0;
   }
+
   .overhead-underline{
     margin-top: 35px;
     margin-bottom: 50px;
+    width: 90%;
   }
 
   .overhead-underline-top{
     margin-bottom: 0;
+    width: 90%;
+  }
+
+  .explore{
+    padding-bottom: 10px;
+    margin: 0;
+  }
+
+  .mobile-image-block{
+    display: block;
+    text-align: center;
+  }
+
+  .mobile-img{
+    width: 350px;
+    height: 250px;
+    padding-bottom: 10px;
   }
 
   .visit, .contact{
     border-left: none;
   }
 
-  .visit-p> p{
-
-  }
-
   .social {
     display: none;
   }
+
+  /* header nav */
+
   .desktop-navigation{
     display: none;
   }
-  /* header nav */
 
   .mobile-navigation{
     display: block;
     width: 100%;
   }
+
   .mobile-navigation ul{
     margin: 0;
     padding: 0;
     overflow: hidden;
     width: 100%;
+    position: sticky;
+    overflow-y: auto;
+    height: 667px;
   }
+
   .mobile-navigation .mobile-menu{
     max-height: 0;
     transition: max-height 0.5s ease-out;
@@ -789,38 +1055,55 @@ td {
     color: #473EEB;
   }
 
-  .mobile-navigation ul li  a.active:hover{
+  .mobile-navigation ul li a.active:hover{
     color: #473EEB;
     background-color: #886BF2;
   }
 
-.mobile-navigation ul li ul li a:hover{
+  .mobile-navigation ul li ul li a.subactive:hover{
+    color: #473EEB;
+    background-color: #9886F2;
+  }
+
+  .mobile-navigation ul li ul li a:hover{
   background-color: #ddd;
   color: blue;
-}
+  }
+
   .mobile-navigation ul li{
     list-style: none;
     background-color: #d01293;
   }
+
   .mobile-navigation ul li a{
     text-decoration: none;
     display: block;
     text-transform: uppercase;
-    font-weight: bold;
-    padding: 14px;
-    color: white;
+    font-size: 80%;
+    padding: 11.5px;
+    color: black;
   }
 
   .mobile-navigation ul li ul li a{
-    color: #fff;
+    color: black;
+  }
+
+  .mobile-navigation ul ul {
+  visibility: hidden;
+  }
+
+  .mobile-navigation ul li.submenu:hover ul{
+  visibility: visible;
   }
 
   .mobile-navigation .mobile-menu-icon{
-    margin: 147px 30px 0 40px;
+    margin: 116px 30px 0 40px;
+    padding: 15px 10px;
     position: relative;
     float: right;
     cursor: pointer;
   }
+
   .mobile-navigation .mobile-menu-icon .mobile-navigation-icon{
     background: #333;
     display: block;
@@ -829,6 +1112,7 @@ td {
     position: relative;
     transition: background 0.2s ease-out;
   }
+
   .mobile-navigation .mobile-menu-icon .mobile-navigation-icon:before{
     background: #FF9124;
     content: "";
@@ -857,7 +1141,6 @@ td {
   .mobile-navigation .mobile-menu-btn {
     display: none;
   }
-
 
   .mobile-navigation .mobile-menu-btn:checked ~ .mobile-menu{
     max-height: 600px;
@@ -889,19 +1172,22 @@ td {
     right: 10px;
   }
 
-
-
   .download{
     margin-top: 45px;
     height: 300px;
   }
+
   .download> h1{
     width: 100%;
+    font-size: 180%;
+    font-weight: normal;
   }
+
   .download> p {
     width: 70%;
     font-size: 90%
   }
+
   .download-btn {
     margin: 50px 0 0;
   }
@@ -913,20 +1199,24 @@ td {
   .image-block-not-index{
     margin: 50px 0;
   }
+
   .image-block, .image-block2, .image-block-explore {
     display: none;
   }
-  .newsletter, .footer-social  {
+
+  .newsletter_btn, .footer-social  {
     width: 175px;
     height: 50px;
     flex: 1;
     border-radius: 0;
   }
+
   /* .newsletter{
   margin: 0;
   margin-left: 28px;
   margin-top: -13px;
   } */
+
   .footer-bottom {
     flex-direction: column;
     height: 100%;
@@ -938,27 +1228,24 @@ td {
 
   .opening-hours>p, .visit>p, .contact>p {
     font-size: 90%;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
 
   .contact {
     margin-bottom: 25px;
   }
+
   td{
     font-size: 90%;
   }
+
   .before_map{
     height: 100%;
   }
+
   .map {
     height: 100%;
-  }
-
-  .map>h2 {
-    border-bottom: 2px solid black;
-    margin-bottom: 10px;
-    margin-top: 10px;
   }
 
   .copyright {
