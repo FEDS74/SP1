@@ -98,7 +98,6 @@ header .desktop-navigation {
   float: right;
   font-family: 'Roboto', sans-serif;
   margin-right: 100px;
-  position: fixed;
 }
 
 .desktop-navigation ul li {
@@ -141,6 +140,7 @@ header .desktop-navigation {
 
 .desktop-navigation ul li:hover ul {
   display: block;
+  padding-top: -1px;
 }
 
 .desktop-navigation ul li ul li {
