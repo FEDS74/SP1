@@ -293,7 +293,7 @@ a.subactive {
   transform: perspective(600px) rotateY(0deg);
 }
 
-.back>img {
+.back>img, .front>img {
   width: 307px;
   height: 292px;
 }
@@ -544,6 +544,7 @@ td {
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1135px) {
+
   .logo {
     width: 20%;
   }
@@ -575,7 +576,7 @@ td {
 
   .desktop-navigation ul {
     margin-right: 50px;
-    margin-top: 21px;
+    margin-top: 26px;
   }
 
   .desktop-navigation ul li a {
@@ -597,6 +598,7 @@ td {
   }
 
   .overhead-p {
+    width: 100%;
     padding-top: 10px;
     padding-bottom: 15px;
   }
@@ -635,6 +637,14 @@ td {
 
   .footer-top {
     margin-left: 100px;
+  }
+
+  td{
+    font-size: 90%;
+  }
+
+  table{
+    margin-top: 4px;
   }
 
   .footer-social-desktop {
@@ -802,6 +812,10 @@ td {
     height: 300px;
     padding-left: 5px;
     padding-bottom: 10px;
+  }
+
+  .download-iphone{
+    width: 100%;
   }
 
   td {
