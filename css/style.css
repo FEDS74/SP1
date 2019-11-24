@@ -307,8 +307,42 @@ a.subactive {
 .download {
   display: block;
   width: 100%;
-  margin-top: 225px;
-  height: 500px;
+  margin-top: -240px;
+  height: 100%;
+}
+
+.white{
+  margin-left: 280px;
+  margin-top: -20px;
+  width: 300px;
+}
+
+.download> .white{
+  color: white;
+}
+
+.black{
+  width: 600px;
+  margin-left: 550px;
+  margin-top: -194px;
+}
+
+.h1-mobile{
+  display: none;
+}
+
+
+.image-block2{
+  margin-bottom: 230px;
+}
+
+.download-iPhone{
+  width: 100%;
+}
+.download-iphone>img{
+  margin-left: 250px;
+  transform: rotatez(-10deg);
+  z-index: -1;
 }
 
 .download>h1 {
@@ -316,15 +350,29 @@ a.subactive {
   padding-top: 30px;
 }
 
-.download>p {
+.download-btn>p {
   color: black;
-  margin-top: 50px;
-  width: 36%;
-  margin: 0 auto;
+  width: 60%;
+  margin: 0;
+  margin-left: 60px;
+  margin-bottom: 20px;
 }
 
 .button {
-  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 430px;
+  padding-top: 50px;
+}
+
+.button-underline{
+  border-bottom: 2px solid black;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+
+  border-bottom: 2px solid black;
 }
 
 .download-btn {
@@ -338,19 +386,21 @@ a.subactive {
   background: rgb(217, 4, 160);
   background: linear-gradient(0deg, rgba(217, 4, 160, 1) 17%, rgba(200, 237, 245, 1) 100%);
   box-shadow: 0px 30px 25px -20px rgba(0, 0, 0, 0.33);
+  margin-bottom: 50px;
 }
 
 .download-btn>img {
   width: 16%;
-  margin: 0 30px -5px -10px;
+  margin: 5px 100px -30px -20px;
 }
 
 .footer-top {
-  height: 45px;
+  height: 100px;
   display: flex;
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  margin-top: 50px;
 }
 
 .footer-bottom {
@@ -371,20 +421,21 @@ a.subactive {
   font-style: italic;
   border-radius: 20px;
 }
-
-.footer-social-links {
-  float: right;
-  margin-top: 10px;
-  width: 300px;
-  height: 50px;
-  margin: 0 auto;
-  padding-right: 20px;
+.footer-social-mobile{
+  display: none;
 }
 
-.newsletter {
+.newsletter-mobile-page{
+  display: none;
+}
+.newsletter-desktop-page {
   height: 50px;
   flex: 1;
-  padding-right: 530px;
+  margin-right: 180px;
+}
+
+.footer-social-desktop{
+  margin-right: 320px;
 }
 
 .newsletter-house {
@@ -410,11 +461,7 @@ a.subactive {
   letter-spacing: .1em;
 }
 
-.footer-social {
-  height: 50px;
-  flex: 1;
-  padding-right: 80px;
-}
+
 
 .opening-hours, .visit, .contact {
   flex: 1;
@@ -553,7 +600,52 @@ td {
   .overhead-p {
     padding-top: 10px;
     padding-bottom: 15px;
+}
+
+
+
+.download-iphone> img{
+  width: 20%;
+}
+
+.white, .black{
+  display: block;
+}
+
+.white{
+  margin-left: 220px;
+}
+
+.black{
+  margin-left: 355px;
+  margin-top: -150px;
+}
+
+.download>p{
+  width: 30%;
+  margin-left: 550px;
+  text-align: justify;
+}
+
+
+.h1-mobile{
+  display: none;
   }
+
+.button{
+  margin-top: 80px;
+  padding-left: 235px;
+}
+
+.footer-top{
+  margin-left: 100px;
+}
+
+.footer-social-desktop {
+  width: 100%;
+    margin-right: 180px;
+}
+
 }
 
 @media only screen and (min-width: 736px) and (max-width: 1000px) {
@@ -611,10 +703,78 @@ td {
   }
 
   .download {
-    margin-top: 100px;
-    height: 350px;
+    width: 100%;
+    margin: 0;
+    height: 280px;
   }
 
+
+  .download-iphone> img{
+   margin-top: 100px;
+   margin-left: 100px;
+   width: 30%;
+  }
+
+.white, .black{
+  display: none;
+}
+
+.h1-mobile{
+  display: block;
+}
+
+.button{
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  padding-left: 85px;
+  padding-top: 0;
+}
+
+.apple, .play{
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+
+.desktop-newsletter{
+display: none;
+}
+
+.newsletter-mobile-page{
+display: block;
+margin-left: 80px;
+}
+
+.newsletter_btn-mobile{
+border-radius: 25px;
+font-size: 85%;
+font-weight: 900;
+width: 175px;
+height: 50px;
+background: rgb(125,114,247);
+background: linear-gradient(220deg, rgba(125,114,247,1) 52%, rgba(71,62,235,1) 100%);
+}
+
+.newsletter-desktop-page{
+display: none;
+}
+
+
+.footer-social-desktop{
+display: none;
+}
+
+.footer-social-mobile{
+display: block;
+flex: none;
+margin-top: 0px;
+margin-left: 180px;
+}
+
+.footer-top{
+  margin-top: 150px;
+}
   .overhead {
     margin-top: 265px;
     margin-bottom: 5px;
@@ -655,7 +815,6 @@ td {
     font-size: 80%;
   }
 
-  .before_map {}
 
   .map>h2 {
     padding: 5px;
@@ -893,7 +1052,21 @@ td {
   .download>p {
     width: 520px;
   }
+  .white{
+    margin-left: 280px;
+    margin-top: -20px;
+    width: 300px;
+  }
 
+  .download> .white{
+    color: white;
+  }
+
+  .black{
+    width: 600px;
+    margin-left: 550px;
+    margin-top: -194px;
+  }
   .footer-bottom {
     padding-top: 100px;
   }
@@ -1007,6 +1180,139 @@ td {
   .mobile-navigation ul li a {
     font-size: 80%;
   }
+
+  .button{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 160px;
+    padding-top: 50px;
+  }
+
+
+    .download {
+      margin-top: 0;
+      height: 250px;
+    }
+
+    .download>h1 {
+      width: 100%;
+      font-size: 180%;
+      font-weight: normal;
+    }
+
+    .download>p {
+      width: 70%;
+      font-size: 90%;
+      padding-top: 15px;
+      margin: 0 0 0 200px;
+    }
+
+    .download-iphone>img{
+      width: 10%;
+    }
+
+    .download-btn {
+      margin: 20px 20px 0 20px;
+      width: 150px;
+      height: 45px;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      background: rgb(217, 4, 160);
+      background: linear-gradient(0deg, rgba(217, 4, 160, 1) 17%, rgba(200, 237, 245, 1) 100%);
+      box-shadow: 0px 30px 25px -20px rgba(0, 0, 0, 0.33);
+      margin-bottom: 50px;
+    }
+
+    .download-btn>img{
+      float: left;
+      margin: 0 0 0 20px;
+      padding-right: 4px;
+    }
+
+    .download-btn>p{
+      float: right;
+      margin: 0 auto;
+      padding-left: 8px;
+    }
+
+
+    .download-iphone>img{
+      width: 20%;
+      margin-top: 50px;
+      margin-left: 100px;
+      margin-bottom: -140px;
+      transform: rotatez(-10deg);
+      z-index: -1;
+    }
+
+.h1-mobile{
+  display: block;
+  padding-left: 200px;
+}
+
+
+
+  .white, .black{
+    display: none;
+  }
+
+    .opening-hours>h3 {
+      margin-top: 30px;
+    }
+
+    .image-block-not-index {
+      margin: 50px 0;
+    }
+
+    .image-block, .image-block2, .image-block-explore {
+      display: none;
+    }
+
+    .newsletter_btn-mobile{
+      width: 175px;
+      height: 50px;
+      border-radius: 0;
+    }
+
+  .desktop-newsletter{
+    display: none;
+  }
+
+  .newsletter-mobile-page{
+    display: block;
+    margin-left: 100px;
+  }
+
+  .newsletter_btn-mobile{
+    border-radius: 25px;
+    font-size: 85%;
+    font-weight: 900;
+    background: rgb(125,114,247);
+    background: linear-gradient(220deg, rgba(125,114,247,1) 52%, rgba(71,62,235,1) 100%);
+  }
+
+  .newsletter-desktop-page{
+    display: none;
+  }
+
+  .newsletter-mobile-page{
+    float: left;
+  }
+
+  .footer-social-desktop{
+    display: none;
+  }
+
+  .footer-social-mobile{
+    display: block;
+    flex: none;
+    margin-top: 0px;
+    margin-left: 80px;
+  }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -1245,12 +1551,19 @@ td {
     right: 10px;
   }
 
+
+.button{
+  width: 100%;
+  padding: 0 3px 0 3px;
+}
+
   .download {
-    margin-top: 45px;
-    height: 300px;
+    margin-top: 0;
+    height: 250px;
   }
 
-  .download>h1 {
+  .h1-mobile{
+    display: block;
     width: 100%;
     font-size: 180%;
     font-weight: normal;
@@ -1258,12 +1571,58 @@ td {
 
   .download>p {
     width: 70%;
-    font-size: 90%
+    font-size: 90%;
+    padding-top: 15px;
+    margin: 0 auto;
   }
 
-  .download-btn {
-    margin: 50px 0 0;
+
+.download-btn{
+  margin: 0 0 0 25px;
+    margin-bottom: 0px;
+width: 150px;
+height: 40px;
+border-radius: 25px;
+font-size: 16px;
+font-weight: bold;
+cursor: pointer;
+background: rgb(217, 4, 160);
+background: linear-gradient(0deg,
+rgba(217, 4, 160, 1) 17%,
+rgba(200, 237, 245, 1) 100%);
+box-shadow: 0px 30px 25px -20px
+rgba(0, 0, 0, 0.33);
+margin-bottom: 40px;
+}
+
+  .download-btn>img{
+    float: left;
+    margin: 0 0 0 20px;
+    padding-right: 4px;
   }
+
+  .download-btn>p{
+    float: left;
+    margin: 0 auto;
+    padding-left: 8px;
+  }
+
+  .download-iPhone{
+    width: 100%;
+  }
+  .download-iphone>img{
+    width: 50%;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: -20px;
+    transform: rotatez(-10deg);
+  }
+
+
+
+.white, .black{
+  display: none;
+}
 
   .opening-hours>h3 {
     margin-top: 30px;
@@ -1277,18 +1636,49 @@ td {
     display: none;
   }
 
-  .newsletter_btn, .footer-social {
+  .newsletter_btn-mobile{
     width: 175px;
     height: 50px;
-    flex: 1;
     border-radius: 0;
   }
 
-  /* .newsletter{
-  margin: 0;
-  margin-left: 28px;
-  margin-top: -13px;
-  } */
+.desktop-newsletter{
+  display: none;
+}
+
+.newsletter-mobile-page{
+  display: block;
+  margin-left: 100px;
+}
+
+.newsletter_btn-mobile{
+  border-radius: 25px;
+  font-size: 85%;
+  font-weight: 900;
+  background: rgb(125,114,247);
+  background: linear-gradient(220deg, rgba(125,114,247,1) 52%, rgba(71,62,235,1) 100%);
+}
+
+.newsletter-desktop-page{
+  display: none;
+}
+
+.newsletter-mobile-page{
+  float: left;
+}
+
+.footer-social-desktop{
+  display: none;
+}
+
+.footer-social-mobile{
+  display: block;
+  flex: none;
+  margin-top: 100px;
+  margin-left: -220px;
+}
+
+
   .footer-bottom {
     flex-direction: column;
     height: 100%;
