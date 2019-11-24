@@ -103,7 +103,7 @@ header .desktop-navigation {
 .desktop-navigation ul li {
   float: left;
   list-style: none;
-  margin: 168px 10px 0;
+  margin: 167px 10px 0;
   position: relative;
 }
 
@@ -140,7 +140,6 @@ header .desktop-navigation {
 
 .desktop-navigation ul li:hover ul {
   display: block;
-  padding-top: -1px;
 }
 
 .desktop-navigation ul li ul li {
