@@ -411,9 +411,9 @@ a.subactive {
 
 .newsletter_btn {
   float: right;
-  margin-top: 5px;
+  margin-top: 7px;
   width: 150px;
-  height: 50px;
+  height: 48px;
   margin-right: 5px;
   font-size: 16px;
   font-weight: bold;
@@ -436,7 +436,8 @@ a.subactive {
 }
 
 .footer-social-desktop {
-  margin-right: 320px;
+  margin-right: 500px;
+  margin-top: 8px;
 }
 
 .newsletter-house {
@@ -444,7 +445,8 @@ a.subactive {
   box-shadow: 0 4px 8px grey;
   height: 62px;
   width: 350px;
-  float: right;
+  float: left;
+  margin-left: 450px;
   border-radius: 10px;
   background: rgb(125, 114, 247);
   background: linear-gradient(220deg, rgba(125, 114, 247, 1) 52%, rgba(71, 62, 235, 1) 100%);
@@ -545,6 +547,11 @@ td {
 
 @media only screen and (min-width: 1000px) and (max-width: 1135px) {
 
+/* I have a horizontal scroll on 1024px, I can´t find out for what*/
+
+  header{
+    width: 100%;
+  }
   .logo {
     width: 20%;
   }
@@ -573,6 +580,7 @@ td {
   p {
     font-size: 90%;
   }
+
 
   .desktop-navigation ul {
     margin-right: 50px;
@@ -630,12 +638,22 @@ td {
     display: none;
   }
 
+.newsletter-house{
+  margin-left: 0px;
+}
+
+
+.footer-social-links{
+  width: 280px;
+}
+
   .button {
     margin-top: 80px;
     padding-left: 235px;
   }
 
   .footer-top {
+    width: 100%;
     margin-left: 100px;
   }
 
@@ -648,14 +666,15 @@ td {
   }
 
   .footer-social-desktop {
-    width: 100%;
-    margin-right: 180px;
+    width: 280px;
+    margin-right: 200px;
   }
 }
 
 @media only screen and (min-width: 736px) and (max-width: 1000px) {
   header {
     height: 200px;
+    width: 100%;
   }
 
   h1 {
