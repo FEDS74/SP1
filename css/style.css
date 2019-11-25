@@ -1094,6 +1094,10 @@ td {
     margin-top: -194px;
   }
 
+.mobile-footer-social-links> img{
+  width: 50%;
+}
+
   .footer-bottom {
     padding-top: 100px;
   }
