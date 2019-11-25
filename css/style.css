@@ -732,6 +732,26 @@ td {
     height: 280px;
   }
 
+  .download-btn{
+    font-size: 70%;
+    width: 150px;
+    height: 50px;
+  }
+
+  .download-btn>img {
+    float: left;
+    margin: 0 0 0 12px;
+    width: 20%;
+  }
+
+  .download-btn>p {
+    float: right;
+    margin: 6px 6px 0;
+    padding-left: 4px;
+    font-size: 140%;
+    font-weight: 900;
+  }
+
   .download-iphone>img {
     margin-top: 100px;
     margin-left: 100px;
@@ -750,7 +770,7 @@ td {
     display: flex;
     margin: 0 auto;
     width: 100%;
-    padding-left: 85px;
+    padding-left: 130px;
     padding-top: 0;
   }
 
@@ -770,8 +790,8 @@ td {
 
   .newsletter_btn-mobile {
     border-radius: 25px;
-    font-size: 85%;
-    font-weight: 900;
+    font-size: 120%;
+    font-weight: bolder;
     width: 175px;
     height: 50px;
     background: rgb(125, 114, 247);
@@ -835,6 +855,14 @@ td {
 
   .download-iphone{
     width: 100%;
+  }
+
+  .mobile-footer-social-links a> img{
+    width: 12%;
+  }
+
+  .footer-social-mobile{
+    padding-top: 15px;
   }
 
   td {
@@ -1094,9 +1122,15 @@ td {
     margin-top: -194px;
   }
 
-.mobile-footer-social-links> img{
-  width: 50%;
+.mobile-footer-social-links a> img{
+  width: 12%;
 }
+
+.footer-social-mobile{
+  padding-top: 15px;
+}
+
+
 
   .footer-bottom {
     padding-top: 100px;
@@ -1117,6 +1151,8 @@ td {
   .contact {
     margin-bottom: 25px;
   }
+
+
 
   td {
     font-size: 90%;
@@ -1158,7 +1194,11 @@ td {
   h1 {
     font-size: 190%;
   }
-
+h3{
+  font-size: 22px;
+  font-weight: normal;
+  margin: 22px 0;
+}
   h4 {
     font-size: 140%;
     margin-top: 60px;
@@ -1244,8 +1284,8 @@ td {
 
   .download-btn {
     margin: 20px 20px 0 20px;
-    width: 150px;
-    height: 45px;
+    width: 100px;
+    height: 35px;
     border-radius: 25px;
     font-size: 16px;
     font-weight: bold;
@@ -1258,14 +1298,15 @@ td {
 
   .download-btn>img {
     float: left;
-    margin: 0 0 0 20px;
-    padding-right: 4px;
+    margin: 0 0 0 12px;
+    padding-right: px;
   }
 
   .download-btn>p {
     float: right;
-    margin: 0 auto;
-    padding-left: 8px;
+    margin: 2px 4px 0;
+    padding-left: 4px;
+    font-size: 60%;
   }
 
   .download-iphone>img {
@@ -1299,9 +1340,14 @@ td {
   }
 
   .newsletter_btn-mobile {
-    width: 175px;
-    height: 50px;
+    width: 125px;
+    height: 40px;
+    margin-top: 10px;
     border-radius: 0;
+  }
+
+  .newsletter_btn-mobile> p{
+    font-size: 70%;
   }
 
   .desktop-newsletter {
