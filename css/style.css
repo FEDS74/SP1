@@ -98,6 +98,7 @@ header .desktop-navigation {
   float: right;
   font-family: 'Roboto', sans-serif;
   margin-right: 100px;
+  margin-top: 14px;
 }
 
 .desktop-navigation ul li {
@@ -546,12 +547,10 @@ td {
 }
 
 @media only screen and (min-width: 1000px) and (max-width: 1135px) {
-
-/* I have a horizontal scroll on 1024px, I can´t find out for what*/
-
-  header{
+  header {
     width: 100%;
   }
+
   .logo {
     width: 20%;
   }
@@ -581,10 +580,9 @@ td {
     font-size: 90%;
   }
 
-
   .desktop-navigation ul {
     margin-right: 50px;
-    margin-top: 26px;
+    margin-top: 24px;
   }
 
   .desktop-navigation ul li a {
@@ -638,14 +636,13 @@ td {
     display: none;
   }
 
-.newsletter-house{
-  margin-left: 0px;
-}
+  .newsletter-house {
+    margin-left: 0px;
+  }
 
-
-.footer-social-links{
-  width: 280px;
-}
+  .footer-social-links {
+    width: 280px;
+  }
 
   .button {
     margin-top: 80px;
@@ -653,15 +650,16 @@ td {
   }
 
   .footer-top {
-    width: 100%;
+    width: 90%;
     margin-left: 100px;
+    float: left;
   }
 
-  td{
+  td {
     font-size: 90%;
   }
 
-  table{
+  table {
     margin-top: 4px;
   }
 
@@ -708,10 +706,7 @@ td {
   }
 
   .desktop-navigation ul {
-    margin-right: 0;
-    float: none;
-    padding: 0;
-    padding-left: 20px;
+    margin-top: 19px;
   }
 
   .desktop-navigation ul li {
@@ -732,9 +727,9 @@ td {
     height: 280px;
   }
 
-  .download-btn{
+  .download-btn {
     font-size: 70%;
-    width: 150px;
+    width: 170px;
     height: 50px;
   }
 
@@ -770,51 +765,41 @@ td {
     display: flex;
     margin: 0 auto;
     width: 100%;
-    padding-left: 130px;
+    padding-left: 220px;
     padding-top: 0;
   }
 
-  .apple, .play {
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-
-  .desktop-newsletter {
+  .newsletter-mobile-page {
     display: none;
   }
 
-  .newsletter-mobile-page {
-    display: block;
-    margin-left: 80px;
+  .newsletter-house {
+    margin: 0 0 0 50px;
+    width: 300px;
   }
 
-  .newsletter_btn-mobile {
-    border-radius: 25px;
+  .newsletter-house>h5 {
     font-size: 120%;
-    font-weight: bolder;
-    width: 175px;
-    height: 50px;
-    background: rgb(125, 114, 247);
-    background: linear-gradient(220deg, rgba(125, 114, 247, 1) 52%, rgba(71, 62, 235, 1) 100%);
   }
 
   .newsletter-desktop-page {
-    display: none;
+    display: block;
   }
 
   .footer-social-desktop {
-    display: none;
+    display: block;
+    margin: 0 auto;
+    height: 48px;
+    padding-top: 8px;
+    margin-right: 50px;
   }
 
   .footer-social-mobile {
-    display: block;
-    flex: none;
-    margin-top: 0px;
-    margin-left: 180px;
+    display: none;
   }
 
   .footer-top {
-    margin-top: 150px;
+    margin-top: 100px
   }
 
   .overhead {
@@ -842,7 +827,7 @@ td {
   .mobile-image-block {
     display: block;
     text-align: center;
-    width: 100%;
+    width: 90%;
     height: 100%;
   }
 
@@ -853,15 +838,15 @@ td {
     padding-bottom: 10px;
   }
 
-  .download-iphone{
+  .download-iphone {
     width: 100%;
   }
 
-  .mobile-footer-social-links a> img{
+  .mobile-footer-social-links a>img {
     width: 12%;
   }
 
-  .footer-social-mobile{
+  .footer-social-mobile {
     padding-top: 15px;
   }
 
@@ -1123,15 +1108,13 @@ td {
     margin-top: -194px;
   }
 
-.mobile-footer-social-links a> img{
-  width: 12%;
-}
+  .mobile-footer-social-links a>img {
+    width: 12%;
+  }
 
-.footer-social-mobile{
-  padding-top: 15px;
-}
-
-
+  .footer-social-mobile {
+    padding-top: 15px;
+  }
 
   .footer-bottom {
     padding-top: 100px;
@@ -1152,8 +1135,6 @@ td {
   .contact {
     margin-bottom: 25px;
   }
-
-
 
   td {
     font-size: 90%;
@@ -1186,6 +1167,7 @@ td {
 @media only screen and (min-width: 480px) and (max-width: 667px) {
   header {
     height: 100px;
+    width: 100%;
   }
 
   .logo {
@@ -1195,11 +1177,13 @@ td {
   h1 {
     font-size: 190%;
   }
-h3{
-  font-size: 22px;
-  font-weight: normal;
-  margin: 22px 0;
-}
+
+  h3 {
+    font-size: 22px;
+    font-weight: normal;
+    margin: 22px 0;
+  }
+
   h4 {
     font-size: 140%;
     margin-top: 60px;
@@ -1224,6 +1208,18 @@ h3{
   }
 
   /* header nav */
+  .desktop-navigation {
+    display: none;
+  }
+
+  .desktop-navigation ul {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
   .mobile-navigation ul {
     position: sticky;
     height: 275px;
@@ -1276,7 +1272,7 @@ h3{
     width: 70%;
     font-size: 90%;
     padding-top: 15px;
-    margin: 0 0 0 200px;
+    margin: 0 0 0 130px;
   }
 
   .download-iphone>img {
@@ -1284,11 +1280,11 @@ h3{
   }
 
   .download-btn {
-    margin: 20px 20px 0 20px;
-    width: 100px;
-    height: 35px;
+    margin: 20px 10px 0 20px;
+    width: 130px;
+    height: 40px;
     border-radius: 25px;
-    font-size: 16px;
+    font-size: 100%;
     font-weight: bold;
     cursor: pointer;
     background: rgb(217, 4, 160);
@@ -1299,15 +1295,16 @@ h3{
 
   .download-btn>img {
     float: left;
-    margin: 0 0 0 12px;
-    padding-right: px;
+    margin: 0 0 4px 4px;
+    width: 20px;
+    padding-top: 3px;
   }
 
   .download-btn>p {
     float: right;
-    margin: 2px 4px 0;
-    padding-left: 4px;
-    font-size: 60%;
+    margin: 2px 4px 0 0;
+    padding-top: 2px;
+    font-size: 80%;
   }
 
   .download-iphone>img {
@@ -1328,6 +1325,23 @@ h3{
     display: none;
   }
 
+  .mobile-footer-social-links a>img {
+    width: 13%;
+  }
+
+  .footer-top {
+    margin: 0 0 0 130px;
+    width: 80%;
+  }
+
+  .footer-social-mobile {
+    width: 250px;
+  }
+
+  .mobile-footer-social-links {
+    margin: 14px 0;
+  }
+
   .opening-hours>h3 {
     margin-top: 30px;
   }
@@ -1343,11 +1357,11 @@ h3{
   .newsletter_btn-mobile {
     width: 125px;
     height: 40px;
-    margin-top: 10px;
+    margin-top: 25px;
     border-radius: 0;
   }
 
-  .newsletter_btn-mobile> p{
+  .newsletter_btn-mobile>p {
     font-size: 70%;
   }
 
@@ -1357,7 +1371,8 @@ h3{
 
   .newsletter-mobile-page {
     display: block;
-    margin-left: 100px;
+    margin-left: 10px;
+    float: left;
   }
 
   .newsletter_btn-mobile {
@@ -1370,10 +1385,6 @@ h3{
 
   .newsletter-desktop-page {
     display: none;
-  }
-
-  .newsletter-mobile-page {
-    float: left;
   }
 
   .footer-social-desktop {
@@ -1391,6 +1402,8 @@ h3{
 @media only screen and (max-width: 480px) {
   header {
     height: 150px;
+    max-width: 480px;
+    width: 100%;
   }
 
   .logo {
@@ -1463,7 +1476,7 @@ h3{
   }
 
   .mobile-img {
-    width: 350px;
+    width: 100%;
     height: 250px;
     padding-bottom: 10px;
   }
@@ -1649,8 +1662,7 @@ h3{
   }
 
   .download-btn {
-    margin: 0 0 0 25px;
-    margin-bottom: 0px;
+    margin: 0 0 0 15px;
     width: 150px;
     height: 40px;
     border-radius: 25px;
@@ -1662,7 +1674,6 @@ h3{
         rgba(217, 4, 160, 1) 17%,
         rgba(200, 237, 245, 1) 100%);
     box-shadow: 0px 30px 25px -20px rgba(0, 0, 0, 0.33);
-    margin-bottom: 40px;
   }
 
   .download-btn>img {
@@ -1703,6 +1714,10 @@ h3{
 
   .image-block, .image-block2, .image-block-explore {
     display: none;
+  }
+
+  .button-apple, .button-play {
+    width: 100%;
   }
 
   .newsletter_btn-mobile {
